@@ -33,19 +33,10 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- <link rel="stylesheet" href="styles/main.css"> -->
-  <!-- endbuild -->
-  <!---end of other css-->
-  <!-- Custom CSS -->
+
   <link href="css/simple-sidebar2.css" rel="stylesheet">
   <link href="css/home.css" rel="stylesheet">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 
@@ -59,60 +50,14 @@
     <!--<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category"> -->
   </head>
 
-  <body class="demo">
+  <body>
     <%- include('navbar')%>
 
       <div class="header">
+
         <span id="navicon" fontsize="10px" onclick="openNav()" style="float: left; font-size: 25px;">&#9776;</span>
-        <!-- 
-            This is the old "buttons" for the amazon promotions, and linkedin. I will keep this code here just in case
-            we ever want to get rid of the new buttons, and revert back to the 
-
-
-
-                <a href="https://www.amazon.com/b?node=21385225011&_encoding=UTF8&linkCode=ib1&tag=knobullsite-20&linkId=16f9b04ff4838ce6bb6479b98b13d1f1&ref_=ihub_curatedcontent_275a4b25-de5a-4992-8523-1cf0c7a6f690" id="AmazonPrimeStudent" style = "font-size: 1.25em; float:left;">
-                  <img src = "images/AmazonSmallSpaceSolutions.PNG" style="
-                      width:8vw; 
-                      min-width: 50px;
-                      float: left;
-                      padding-left: 25px;">
-                </a>
-
-                <a href="https://www.amazon.com/Best-Sellers-Sports-Outdoors/zgbs/sporting-goods?_encoding=UTF8&linkCode=ib1&tag=knobullsite-20&linkId=21c42b2e8582de2c8b9a158618e086f9&ref_=ihub_curatedcontent_517fb392-2809-4264-bd66-69e751b2a97a%22%3EBest" id="AmazonPrimeStudent" style = "font-size: 1.25em; float:left;">
-                  <img src = "images/AmazonSportsAndOutdoors.PNG" style="
-                      width:8vw;
-                      min-width: 50px;
-                      float: left;
-                      padding-left: 30px;
-                      top: 2px;
-                      position: relative;
-                      z-index: 1;">
-                      
-                </a>
-
-                <a href="https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics?_encoding=UTF8&linkCode=ib1&tag=knobullsite-20&linkId=fdb49480e113b46e8ac45678ef45aeb8&ref_=ihub_curatedcontent_c71c4a67-0a56-4af2" id="AmazonPrimeStudent" style = "font-size: 1.25em; float:left;">
-                  <img src = "images/AmazonElectronics.PNG" style="
-                      width:8vw;
-                      min-width: 50px;
-                      float: left;
-                      padding-left: 35px;
-                      top: 2px;
-                      position: relative;
-                      z-index: 1;">
-                      
-                </a>
-
-              
-             
-            -->
-        <!-- <a href="https://www.linkedin.com/company/knobull-inc" id="linkedin" style="
-            margin-right: 20px;">
-          <img src="https://1000logos.net/wp-content/uploads/2017/03/Linkedin-Logo.png" style="
-                  width:8vw;
-                  min-width: 50px;
-                  z-index: -1;
-                  float: right;">
-        </a> -->
+        <a class="header_logo" href="https://www.linkedin.com/company/knobull-inc/"><img src="images/Linkdein.png"
+            width="100" alt="" /></a>
         <style>
           .button {
             height: 20px;
@@ -125,6 +70,16 @@
             font-size: 12px;
             font-weight: 500;
             cursor: pointer;
+          }
+
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .demo .header_logo {
+            display: none;
           }
 
           .button__text,
@@ -147,27 +102,6 @@
           }
         </style>
 
-        <!-- <div id="container">
-
-          <a
-            href="https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics?_encoding=UTF8&linkCode=ib1&tag=knobullsite-20&linkId=fdb49480e113b46e8ac45678ef45aeb8&ref_=ihub_curatedcontent_c71c4a67-0a56-4af2">
-            <button type="button" class="button">
-              <span class="button__text">Amazon Electronics</span>
-              <span class="button__icon">
-                <ion-icon name="logo-amazon"></ion-icon>
-              </span>
-            </button>
-          </a>
-
-          <a href="https://edx.sjv.io/c/4076875/1598007/17728">
-            <img src="/images/edx.png" alt='edx-img' style='width:75px' />
-          </a>
-
-
-
-        </div> -->
-
-
         <!--Connecting to ionicons to use icons-->
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
@@ -181,9 +115,6 @@
       <div class="row">
         <div class="col-lg-12">
           <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-          <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a> -->
-
-          <!-- /#wrapper -->
 
           <!-- BEGIN javascript for nav bar -->
           <script>
@@ -193,7 +124,7 @@
               document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             }
             window.onresize = (e) => {
-              if (e.target.innerWidth >= 700) {
+              if (e.target.innerWidth >= 770) {
                 document.body.classList.add('demo')
               } else {
                 document.body.classList.remove('demo')
@@ -288,7 +219,8 @@
                 <!--  <a ng-href="#/learn" style="color: #777777" >Learning Center</a> -->
                 <div class="blog-container">
                   <!-- <a class="blog" href="https://www.linkedin.com/today/author/lynnhbentley?trk=prof-sm" style="color: #777777> -->
-                  <a class="blog" href="https://www.edx.org/?irclickid=wR11to02IxyPWVF2CzQlUV77UkFxcVw8wx-ATM0&utm_source=affiliate&utm_medium=Knobull&utm_campaign=edX%20Tracking%20Link_&utm_content=TEXT_LINK&irgwc=1">
+                  <a class="blog"
+                    href="https://www.edx.org/?irclickid=wR11to02IxyPWVF2CzQlUV77UkFxcVw8wx-ATM0&utm_source=affiliate&utm_medium=Knobull&utm_campaign=edX%20Tracking%20Link_&utm_content=TEXT_LINK&irgwc=1">
                     <!-- <img src="images/See_Blog_Design_small.png" class="blog_design" alt="picture" /> -->
                     <!-- <p style="margin-top: -20px; color: #30A0FF; font-family: sans-serif; font-weight:bolder; font-size: 3.5rem; "
                       class="a">JobStars USA</p> -->
@@ -389,13 +321,8 @@
   </div>
   <!-- end of main view -->
 
-
-  <!-- commenting this out until blog site is completed 
-<div class="container">
-  <img src="images/blogimg.jpeg" alt="blogimage" style="width:100%;"/>
-  <a href="https://www.linkedin.com/pulse/research-search-truth-lynn-bentley/"><div class="centered">Learning Center Blog</div></a>
-</div>
-    <!-- jQuery -->
+  </div>
+  <!-- jQuery -->
   <script src="js/jquery.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
@@ -450,14 +377,6 @@
           class="statcounter" src="https://c.statcounter.com/12383951/0/d7c37afd/1/" alt="Web Analytics"></a></div>
   </noscript>
   <!-- End of Statcounter Code -->
-
-  <!--New buttons
-      
-      where the icons are from https://ionicons.com/
-          
-      -->
-
-  <!--Styling for buttons-->
 
 
 </body>
