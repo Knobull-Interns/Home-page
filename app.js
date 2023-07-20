@@ -79,9 +79,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-
-// run on local host
-var port = process.env.PORT || 3000;
-app.listen(port, function () {
-  console.log("Express server listening on port " + port);
-});
